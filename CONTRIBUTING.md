@@ -1,6 +1,6 @@
 # Contributing to [Student Meal Planner]
 
-Thank you for considering contributing to the [Your Project Name] project! The following is a set of guidelines for contributing to [Your Project Name]. Please take a moment to review this document before making a contribution.
+Thank you for considering contributing to the [Your Project Name] project! The following is a set of guidelines for contributing to [Student Meal Planner]. Please take a moment to review this document before making a contribution.
 
 ## How to Contribute
 
