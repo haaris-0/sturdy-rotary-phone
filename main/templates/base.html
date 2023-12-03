@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Meal Planner</title>
+</head>
+<body>
+    <h1>Welcome to the Student Meal Planner</h1>
+    <form id="mealForm">
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" name="studentID" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="button" onclick="runMealPlanner()">Run Meal Planner</button>
+    </form>
+
+    <script>
+        function runMealPlanner() {
+            // Get user input
+            var studentID = document.getElementById("studentID").value;
+            var password = document.getElementById("password").value;
+
+            // You may want to perform additional validation here
+
+            // Send the data to the server-side script using AJAX or other means
+            // In a real-world scenario, you would use a server-side language like Python (Flask/Django) to handle this.
+
+            // For simplicity, we'll just display an alert for now
+            alert("Meal planner would run for student ID: " + studentID);
+        }
+    </script>
+</body>
+</html>
