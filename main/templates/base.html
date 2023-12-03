@@ -17,6 +17,14 @@
         <button type="button" onclick="runMealPlanner()">Run Meal Planner</button>
     </form>
 
+    <div id="mealPlanSection" style="display: none;">
+        <h2>Meal Plan</h2>
+        <div id="mealPlanOutput"></div>
+
+        <h2>Grocery List</h2>
+        <div id="groceryListOutput"></div>
+    </div>
+
     <script>
         function runMealPlanner() {
             // Get user input
@@ -30,6 +38,35 @@
 
             // For simplicity, we'll just display an alert for now
             alert("Meal planner would run for student ID: " + studentID);
+
+            // Assuming mealPlanner object is defined globally
+            mealPlanner.planMeals(5); // You can customize the number of days
+            displayMealPlan();
+            displayGroceryList();
+        }
+
+        function displayMealPlan() {
+            var mealPlanOutput = document.getElementById("mealPlanOutput");
+            mealPlanOutput.innerHTML = "";
+
+            // Display meal plan in the mealPlanOutput div
+            for (const mealType in mealPlanner.meals) {
+                const chosenMeal = mealPlanner.meals[mealType][0]; // Displaying the first meal for simplicity
+                mealPlanOutput.innerHTML += `${mealType}: ${chosenMeal.name}<br>`;
+            }
+
+            // Show the meal plan section
+            document.getElementById("mealPlanSection").style.display = "block";
+        }
+
+        function displayGroceryList() {
+            var groceryListOutput = document.getElementById("groceryListOutput");
+            groceryListOutput.innerHTML = "";
+
+            // Display grocery list in the groceryListOutput div
+            mealPlanner.groceryList.forEach(item => {
+                groceryListOutput.innerHTML += `- ${item}<br>`;
+            });
         }
     </script>
 </body>
